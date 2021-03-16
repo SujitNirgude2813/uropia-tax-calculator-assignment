@@ -15,6 +15,7 @@ buildscript {
 plugins {
     id 'name.remal.check-updates' version '1.1.6'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.31'
 }
 
 allprojects {
@@ -33,6 +34,7 @@ subprojects {
             dependencySet(group: 'io.cucumber', version: '6.9.1') {
                 entry 'cucumber-java'
                 entry 'cucumber-junit'
+                entry 'cucumber-java8'
                 entry 'cucumber-junit-platform-engine'
             }
             dependency 'junit:junit:4.13.1'
@@ -83,6 +85,7 @@ configure(subprojects) {
 
         testImplementation 'io.cucumber:cucumber-java'
         testImplementation 'io.cucumber:cucumber-junit'
+        testImplementation 'io.cucumber:cucumber-java8'
         testImplementation 'io.cucumber:cucumber-junit-platform-engine'
         testImplementation 'junit:junit'
         testImplementation 'org.junit.jupiter:junit-jupiter'
