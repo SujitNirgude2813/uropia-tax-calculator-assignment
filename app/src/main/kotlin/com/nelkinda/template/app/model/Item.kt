@@ -4,6 +4,6 @@ import java.math.BigDecimal
 
 data class Item(
         val name: String,
-        val count: Int,
+        var count: Int,
         val price: BigDecimal
 )
