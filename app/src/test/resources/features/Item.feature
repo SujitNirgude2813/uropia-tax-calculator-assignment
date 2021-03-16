@@ -10,7 +10,7 @@ Feature: Item
     Given Two item with name, quantity and price are as follows:
       | Item | Count | Price |
       | Book | 1     | 12.49 |
-      | Book | 1     | 12.49 |
+      | Book | 2     | 12.49 |
     Then Both items should be equal
 
     Given Two item with name, quantity and price are as follows:

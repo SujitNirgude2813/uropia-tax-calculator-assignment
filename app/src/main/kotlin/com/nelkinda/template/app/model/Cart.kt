@@ -9,7 +9,7 @@ class Cart {
     }
 
     fun addItem(item: Item) {
-        val existingItem = items.find { it.name == item.name }
+        val existingItem = items.find { it == item }
         existingItem?.let {
             existingItem.count += item.count
             return
