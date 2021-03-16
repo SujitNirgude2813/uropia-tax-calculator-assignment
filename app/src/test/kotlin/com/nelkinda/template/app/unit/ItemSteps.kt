@@ -1,6 +1,7 @@
 package com.nelkinda.template.app.unit
 
 import com.nelkinda.template.app.Item
+import io.cucumber.java.en.And
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
 import org.junit.Assert.*
@@ -19,5 +20,14 @@ class ItemSteps {
         assertEquals(name, item.name)
     }
 
+    @And("The count of Item should be {int}")
+    fun `The count of Item should be`(count: Int){
+        assertEquals(count, item.count)
+    }
+
+    @And("The price of Item should be {double}")
+    fun `The price of Item should be`(price: Double){
+        assertEquals(price.toBigDecimal(), item.price)
+    }
 
 }

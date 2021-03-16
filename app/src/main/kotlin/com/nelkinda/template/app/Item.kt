@@ -2,6 +2,6 @@ package com.nelkinda.template.app
 
 import java.math.BigDecimal
 
-class Item(public val name: String, count: Int, price: BigDecimal) {
+class Item(val name: String, val count: Int, val price: BigDecimal) {
 
 }
