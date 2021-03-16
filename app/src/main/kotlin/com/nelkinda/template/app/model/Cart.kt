@@ -1,4 +1,4 @@
-package com.nelkinda.template.app
+package com.nelkinda.template.app.model
 
 class Cart {
 

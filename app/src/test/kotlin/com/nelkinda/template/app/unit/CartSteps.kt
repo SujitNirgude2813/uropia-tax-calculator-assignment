@@ -1,7 +1,7 @@
 package com.nelkinda.template.app.unit
 
-import com.nelkinda.template.app.Cart
-import com.nelkinda.template.app.Item
+import com.nelkinda.template.app.model.Cart
+import com.nelkinda.template.app.model.Item
 import io.cucumber.datatable.DataTable
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then

@@ -1,6 +1,6 @@
 package com.nelkinda.template.app.unit
 
-import com.nelkinda.template.app.Item
+import com.nelkinda.template.app.model.Item
 import io.cucumber.java.en.And
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
