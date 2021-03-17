@@ -1,4 +1,4 @@
-package com.nelkinda.template.app.unit
+package com.nelkinda.template.app.unit.model
 
 import com.nelkinda.template.app.model.Item
 import io.cucumber.datatable.DataTable
