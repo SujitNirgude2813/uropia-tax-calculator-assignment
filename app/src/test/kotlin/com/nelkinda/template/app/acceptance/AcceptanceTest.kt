@@ -9,4 +9,4 @@ import org.junit.runner.RunWith
         features = ["../features"]
 )
 @RunWith(io.cucumber.junit.Cucumber::class)
-class AcceptanceTest: En
+class AcceptanceTest : En

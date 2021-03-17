@@ -7,7 +7,7 @@ import java.math.BigDecimal
 class BillingService {
 
     fun generateInvoice(cart: Cart): Invoice {
-        return Invoice(BigDecimal(0.00), BigDecimal(0.00), BigDecimal(0.00),BigDecimal(0.00))
+        return Invoice(BigDecimal(0.00), BigDecimal(0.00), BigDecimal(0.00), BigDecimal(0.00))
     }
 
 }

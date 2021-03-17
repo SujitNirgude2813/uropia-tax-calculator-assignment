@@ -34,13 +34,13 @@ class CartSteps {
     }
 
     @When("Item with name as {string}, count as {int} and Price as {double} is added to cart")
-    fun `Item is added to a cart`(name: String,count: Int, price: Double){
+    fun `Item is added to a cart`(name: String, count: Int, price: Double) {
         val item = Item(name, count, price.toBigDecimal())
         cart.addItem(item)
     }
 
     @And("The quantity of this item should be {int}")
-    fun `The quantity of item should be`(count: Int){
+    fun `The quantity of item should be`(count: Int) {
         assertEquals(count, cart.getItems()[0].count)
     }
 }
