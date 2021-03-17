@@ -3,6 +3,7 @@ package com.nelkinda.template.app.unit.service
 import com.nelkinda.template.app.model.Cart
 import com.nelkinda.template.app.model.Invoice
 import com.nelkinda.template.app.service.BillingService
+import io.cucumber.java.en.And
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
@@ -28,4 +29,20 @@ class BillingServiceTest {
     fun `The invoice total should be`(total: Double){
         assertEquals(BigDecimal(total), invoice.total)
     }
+
+    @And("The sales tax 10% should be {double}")
+    fun `The sales tax 10 percent should be`(salesTax10P: Double){
+        assertEquals(BigDecimal(salesTax10P),invoice.salesTax10P)
+    }
+
+    @And("The sales tax 50% should be {double}")
+    fun `The sales tax 50 percent should be`(salesTax50P: Double){
+        assertEquals(BigDecimal(salesTax50P),invoice.salesTax50P)
+    }
+
+    @And("The environmental deposit should be {double}")
+    fun `The environmental deposit should be`(envDeposit: Double){
+        assertEquals(BigDecimal(envDeposit),invoice.envDeposit)
+    }
+
 }
