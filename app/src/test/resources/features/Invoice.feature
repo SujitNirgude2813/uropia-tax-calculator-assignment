@@ -8,6 +8,7 @@ Feature: Invoice
     And The sales tax 10% is 2.30
     And The sales tax 50% is 0.70
     And The environmental deposit is 6.00
+    And The invoice must to equal to itself
 
   Scenario: Two invoices must be different
     When Two invoices are generated with the following values

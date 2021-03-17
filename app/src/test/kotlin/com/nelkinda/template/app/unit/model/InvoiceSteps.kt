@@ -44,6 +44,11 @@ class InvoiceSteps {
         Assert.assertEquals(BigDecimal(envDeposit), invoice.envDeposit)
     }
 
+    @And("The invoice must to equal to itself")
+    fun `The invoice must to equal to itself`() {
+        Assert.assertEquals(invoice, invoice)
+    }
+
     @When("Two invoices are generated with the following values")
     fun `Two invoices are generated with the following values`(dataTable: List<Map<String, Double>>) {
         val map1: Map<String, Double> = dataTable[0]
