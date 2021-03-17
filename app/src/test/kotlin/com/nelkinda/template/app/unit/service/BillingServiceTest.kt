@@ -2,13 +2,16 @@ package com.nelkinda.template.app.unit.service
 
 import com.nelkinda.template.app.model.Cart
 import com.nelkinda.template.app.model.Invoice
+import com.nelkinda.template.app.model.Item
 import com.nelkinda.template.app.service.BillingService
+import io.cucumber.datatable.DataTable
 import io.cucumber.java.en.And
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
 import org.junit.Assert.assertEquals
 import java.math.BigDecimal
+import java.math.RoundingMode
 
 class BillingServiceTest {
 
@@ -27,7 +30,7 @@ class BillingServiceTest {
 
     @Then("The invoice total should be {double}")
     fun `The invoice total should be`(total: Double) {
-        assertEquals(BigDecimal(total), invoice.total)
+        assertEquals(BigDecimal(total).setScale(2, RoundingMode.HALF_UP), invoice.total)
     }
 
     @And("The sales tax 10% should be {double}")
@@ -43,6 +46,20 @@ class BillingServiceTest {
     @And("The environmental deposit should be {double}")
     fun `The environmental deposit should be`(envDeposit: Double) {
         assertEquals(BigDecimal(envDeposit), invoice.envDeposit)
+    }
+
+    @Given("A cart with following items:")
+    fun `A cart with following items`(dataTable: DataTable) {
+        cart = Cart()
+
+        for (entry: Map<String, String> in dataTable.asMaps()) {
+            val item = Item(
+                    entry["Item"]!!,
+                    entry["Count"]!!.toInt(),
+                    BigDecimal(entry["Price"]!!)
+            )
+            cart.addItem(item)
+        }
     }
 
 }
