@@ -6,7 +6,8 @@ import org.junit.runner.RunWith
 
 @CucumberOptions(
         publish = false,
-        features = ["../features"]
+        features = ["../features"],
+        glue = ["com.nelkinda.template.app.acceptance"]
 )
 @RunWith(io.cucumber.junit.Cucumber::class)
 class AcceptanceTest : En

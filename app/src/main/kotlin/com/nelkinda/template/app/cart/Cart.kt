@@ -1,12 +1,10 @@
-package com.nelkinda.template.app.model
+package com.nelkinda.template.app.cart
+
+import com.nelkinda.template.app.item.Item
 
 class Cart {
 
     private var items = listOf<Item>()
-
-    fun itemCount(): Int {
-        return items.size
-    }
 
     fun addItem(item: Item) {
         val existingItem = items.find { it == item }
@@ -18,8 +16,6 @@ class Cart {
         items = items + item
     }
 
-    fun getItems(): List<Item> {
-        return items
-    }
+    fun getItems() = items
 
 }

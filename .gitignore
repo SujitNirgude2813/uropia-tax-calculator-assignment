@@ -14,3 +14,8 @@ local.properties
 
 # Vim
 *.swp
+
+# Project build
+out/
+generated/
+generated_tests/
